@@ -70,7 +70,8 @@ export default {
     } else if(message === 'leftChat'){
       this.message = 'You left chat'
     }
-
+    this.$peer._connections.clear()
+    this.$peer._events.call = this.$peer._events.call.slice(0,1)
     this.snackbar = !!this.message
   },
   data: () => ({
@@ -93,7 +94,8 @@ export default {
       if(this.$refs.form.validate()){
         const user = {
           name: this.name,
-          room: this.room
+          room: this.room,
+          peer: this.$peer.id
         };
         this.$socket.emit('userJoined', user, data => {
             if( typeof data === 'string'){
