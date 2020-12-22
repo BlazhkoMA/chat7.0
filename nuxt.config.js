@@ -1,5 +1,9 @@
 module.exports = {
   // Target (https://go.nuxtjs.dev/config-target)
+server: {
+    port: 3000, // default: 3000
+    host: 'webcreative.ru.com' // default: localhost
+  },
   mode: 'universal',
   telemetry: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
