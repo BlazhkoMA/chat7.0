@@ -1,5 +1,5 @@
-function m(name, text, id) {
-  return {name, text, id}
+function m(user, text, time) {
+  return {user, text, time}
 }
 
 

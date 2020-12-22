@@ -19,7 +19,9 @@ class Users {
     }
     return user
   }
-
+  checkInside(name, id){
+    return this.users.find(user => user.name == name && user.room == id)
+  }
   getByRoom(room){
     return this.users.filter(user => user.room === room)
   }

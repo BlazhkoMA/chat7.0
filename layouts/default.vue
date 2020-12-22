@@ -51,6 +51,7 @@ export default {
   computed: mapState(['user', 'users']),
   mounted() {
     this.$vuetify.theme.dark = true
+
   },
   methods: {
     ...mapMutations(['clearData']),
